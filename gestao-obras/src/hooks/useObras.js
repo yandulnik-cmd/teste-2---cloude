@@ -77,11 +77,9 @@ export function useObra(id) {
         .from("obras")
         .select(`
           *,
-          orcamento_categorias (
-            id, categoria, valor_orcado, percentual_orcado,
-            progresso_fisico (id, percentual_real, data_registro),
-            custos_obra (id, valor, tipo, descricao, data_emissao)
-          )
+          orcamento_categorias (id, categoria, valor_orcado, percentual_orcado),
+          progresso_fisico (id, categoria, percentual_real, data_registro),
+          custos_obra (id, valor, tipo, categoria, descricao, data_emissao)
         `)
         .eq("id", id)
         .single();
