@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { Building2, DollarSign, LayoutDashboard, PlusCircle, Settings } from "lucide-react";
+import { Building2, DollarSign, LayoutDashboard, PlusCircle, Settings, TrendingUp, Landmark } from "lucide-react";
 import { cn } from "../lib/utils";
 
 const navItems = [
   { to: "/", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/obras", icon: Building2, label: "Obras" },
   { to: "/custos/novo", icon: PlusCircle, label: "Lançar Custo" },
+  { to: "/faturamentos/novo", icon: TrendingUp, label: "Faturar Medição" },
   { to: "/financeiro", icon: DollarSign, label: "Financeiro" },
+  { to: "/bancos", icon: Landmark, label: "Bancos" },
   { to: "/configuracoes", icon: Settings, label: "Configurações" },
 ];
 
